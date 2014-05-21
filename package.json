@@ -1,6 +1,6 @@
 {
   "name": "interface-checker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A way to store interface definitions and validate if an object meets a certain interface",
   "keywords": [
     "interface",

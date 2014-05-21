@@ -44,20 +44,46 @@ describe('interface-checker', function() {
     }, 'MultipleMethods')).to.be.true;
   });
 
-  it('should return false when method is not satisfied', function*() {
+  it('should return error object when method is not satisfied', function*() {
     expect(interfaceChecker.has({
       two: function(one, two) {
 
       }
-    }, 'Parameters')).to.be.false;
+    }, 'Parameters')).to.deep.equal({
+      missing: [
+        'one'
+      ]
+    });
   });
 
-  it('should return false when method parameter count is not satisfied', function*() {
+  it('should return error object when method parameter count is not satisfied', function*() {
     expect(interfaceChecker.has({
       one: function(one) {
 
       }
-    }, 'Parameters')).to.be.false;
+    }, 'Parameters')).to.deep.equal({
+      parameterMismatch: [
+        'one should have 2 parameters but it currently has 1 parameters'
+      ]
+    });
+  });
+
+  it('should return error object when multiple issues are present', function*() {
+    expect(interfaceChecker.has({
+      one: function(one) {
+
+      },
+      three: function(one, two) {
+
+      }
+    }, 'MultipleMethods')).to.deep.equal({
+      missing: [
+        'two'
+      ],
+      parameterMismatch: [
+        'three should have 4 parameters but it currently has 2 parameters'
+      ]
+    });
   });
 
   it('should throw error when checking against interface that has not been defined', function*() {
