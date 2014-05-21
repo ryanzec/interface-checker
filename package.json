@@ -23,6 +23,7 @@
     "string-format-js": "0.1.1"
   },
   "devDependencies": {
+    "co": "3.0.6",
     "mocha": "1.18.2",
     "chai": "1.9.1",
     "sinon": "1.9.1"
