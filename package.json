@@ -20,7 +20,7 @@
     "url" : "http://www.ryanzec.com"
   },
   "dependencies": {
-    "string-format-js": "0.1.1"
+    "string-format": "0.2.1"
   },
   "devDependencies": {
     "co": "3.0.6",
