@@ -1,0 +1,14 @@
+{
+  "name": "interface-checker",
+  "repo": "ryanzec/interface-checker",
+  "description": "A way to store interface definitions and validate if an object meets a certain interface",
+  "version": "0.5.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": [
+    "lib/index.js"
+  ]
+}
