@@ -19,9 +19,6 @@
     "email" : "code@ryanzec.com",
     "url" : "http://www.ryanzec.com"
   },
-  "dependencies": {
-    "string-format": "0.2.1"
-  },
   "devDependencies": {
     "co": "3.0.6",
     "mocha": "1.18.2",
