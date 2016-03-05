@@ -1,3 +1,5 @@
+**Since I am no longer using NodeJS as a backend language, I am no longer maintaining this project**
+
 # Interface Checker
 
 A node library to store interface definitions and check to see if an object matches a defined interface.  Can match method names and optionally parameter count.
